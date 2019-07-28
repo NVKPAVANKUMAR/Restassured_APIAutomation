@@ -39,3 +39,21 @@ jobs:
 
       # run tests!
       - run: mvn integration-test
+
+workflows:
+  version: 2
+  commit-workflow:
+    jobs:
+      - test
+
+  nightly:
+    triggers: #use the triggers key to indicate a scheduled build
+      - schedule:
+          cron: "30 19 * * *" # use cron syntax to set the schedule
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - test
+      - deploy
