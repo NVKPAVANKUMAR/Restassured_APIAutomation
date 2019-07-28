@@ -42,10 +42,6 @@ jobs:
 
 workflows:
   version: 2
-  commit-workflow:
-    jobs:
-      - test
-
   nightly:
     triggers: #use the triggers key to indicate a scheduled build
       - schedule:
