@@ -6,7 +6,8 @@
 </listeners>
     <test name="Regression suite 1" >
         <classes>
-            <class name="com.employeeapi.testCases.TC_009_Post_API_DataDriven"/>
+            <class name="com.employeeapi.testCases.TC_001_Get_All_Employees"/>
+            <class name="com.employeeapi.testCases.TC_002_Get_Single_Employee_Record"/>
         </classes>
     </test>
 </suite>
