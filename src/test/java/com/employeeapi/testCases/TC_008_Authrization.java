@@ -8,7 +8,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_008_Autherization {
+public class TC_008_Authrization {
     @Test
     public void Test_Basic_Auth() {
         RestAssured.baseURI = "http://restapi.demoqa.com/authentication/CheckForAuthentication";

@@ -42,7 +42,7 @@ public class TC_009_Post_API_DataDriven extends TestBase {
         Response response = httpRequest.request(POST, "/create");
 
         String responseBody = response.getBody().asString();
-        System.out.println("Response Body is : " + responseBody);
+        // System.out.println("Response Body is : " + responseBody);
         responseList.add(responseBody);
         int rownum = XLUtils.getRowCount(path, "Sheet1");
         for (int r = 0; r <= rownum; r++) {
