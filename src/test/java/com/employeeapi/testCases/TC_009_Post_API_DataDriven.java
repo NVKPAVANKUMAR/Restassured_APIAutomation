@@ -42,7 +42,6 @@ public class TC_009_Post_API_DataDriven extends TestBase {
         Response response = httpRequest.request(POST, "/create");
 
         String responseBody = response.getBody().asString();
-        // System.out.println("Response Body is : " + responseBody);
         responseList.add(responseBody);
         int rownum = XLUtils.getRowCount(path, "Sheet1");
         for (int r = 0; r <= rownum; r++) {
@@ -58,7 +57,6 @@ public class TC_009_Post_API_DataDriven extends TestBase {
     Object[][] getEmpData() throws IOException {
         int rownum = XLUtils.getRowCount(path, "Sheet1");
         int colcount = XLUtils.getCellCount(path, "Sheet1", 1);
-
         String empdata[][] = new String[rownum][colcount];
         for (int r = 1; r <= rownum; r++) {
             for (int c = 0; c < colcount - 1; c++) {

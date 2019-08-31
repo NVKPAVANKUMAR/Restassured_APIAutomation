@@ -20,25 +20,25 @@ public class XLUtils {
     public static XSSFRow row;
     public static XSSFCell cell;
 
-    public static int getRowCount(String xlfile, String xlsheet) throws IOException {
-        fis = new FileInputStream(xlfile);
+    public static int getRowCount(String xlFile, String xlSheet) throws IOException {
+        fis = new FileInputStream(xlFile);
         wb = new XSSFWorkbook(fis);
-        ws = wb.getSheet(xlsheet);
-        int rowcount = ws.getLastRowNum();
+        ws = wb.getSheet(xlSheet);
+        int rowCount = ws.getLastRowNum();
         wb.close();
         fis.close();
-        return rowcount;
+        return rowCount;
     }
 
-    public static int getCellCount(String xlfile, String xlsheet, int rownum) throws IOException {
-        fis = new FileInputStream(xlfile);
+    public static int getCellCount(String xlFile, String xlSheet, int rowNum) throws IOException {
+        fis = new FileInputStream(xlFile);
         wb = new XSSFWorkbook(fis);
-        ws = wb.getSheet(xlsheet);
-        row = ws.getRow(rownum);
-        int cellcount = row.getLastCellNum();
+        ws = wb.getSheet(xlSheet);
+        row = ws.getRow(rowNum);
+        int cellCount = row.getLastCellNum();
         wb.close();
         fis.close();
-        return cellcount;
+        return cellCount;
     }
 
     public static String getCellData(String xlfile, String xlsheet, int rownum, int colnum) throws IOException {
